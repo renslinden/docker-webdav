@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ -n "$USERNAME" ] && [ -n "$PASSWORD" ]
 then
@@ -7,7 +7,7 @@ then
 else
     echo Using no auth.
 	sed -i 's%auth_basic "Restricted";% %g' /etc/nginx/conf.d/default.conf
-	sed -i 's%auth_basic_user_file htpasswd;% %g' /etc/nginx/conf.d/default.conf
+	sed -i 's%auth_basic_user_file /etc/nginx/htpasswd;% %g' /etc/nginx/conf.d/default.conf
 fi
 mediaowner=$(ls -ld /media | awk '{print $3}')
 echo "Current /media owner is $mediaowner"

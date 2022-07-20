@@ -1,6 +1,6 @@
-FROM debian:10.6-slim
+FROM debian:11.3-slim
 
-LABEL maintainer "ugeek. ugeekpodcast@gmail.com" 
+LABEL maintainer "info@rensvanderlinden.nl" 
 
 ARG UID=${UID:-1000}
 ARG GID=${GID:-1000}
